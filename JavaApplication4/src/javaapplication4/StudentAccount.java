@@ -9,21 +9,42 @@ package javaapplication4;
  * @author HARRIE
  */
 public class StudentAccount extends BankManag {
+
+       
     public StudentAccount(){
     }
-    public StudentAccount(String AccountName, double AccountNumber, String Branch){
+    public StudentAccount(String AccountName, int AccountNumber, String AccountType, String Branch, double Balance){
         setAccountName(AccountName);
-        setAccountNumber(AccountNumber);
+        getAccountNumber();
+        setAccountType(AccountType);
         setBranch(Branch);
+        getBalance();
     }
-    public double getBookOpeningBalance(){
-        double BookOpeningBalance = 200;
-        return BookOpeningBalance;
+       
+public double initBalance(double Withdraw){
+    double initBalance = 200;
+    if(Withdraw<initBalance){
+        System.out.println("insufficient balance");
+        
+    }
+    return initBalance;
+    
+}
+    
+
+    
+}
+       
+        
+   
+  
+
  
-    }
+   
+  
 
    
      
     
     
-}
+
