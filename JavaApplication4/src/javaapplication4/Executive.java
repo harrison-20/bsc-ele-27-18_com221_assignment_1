@@ -21,20 +21,22 @@ public class Executive extends BankManag {
         this.initBalance = initBalance;
         
     }
-    public Executive(double initBalance, String AccountName, int AccountNumber, String Branch, String AccountType, double Balance){
+    public Executive(double initBalance, String AccountName, int AccountNumber, String Branch,String Account, String AccountType, double Balance){
         this.initBalance = 20000; 
         setAccountName(AccountName);
         getAccountNumber();
         setBranch(Branch);
-         setAccountType(AccountType);
-         getBalance();
+        setAccountType(AccountType);
+        getBalance();
+        Account();
     }    
-    public double getinitBalance(double Withdraw){
+    public double getinitBalance(double Amount){
      initBalance = 20000;
-    if(Withdraw<initBalance){
-        Withdraw -= initBalance;
+    if(Amount<initBalance){
+        Amount -= initBalance;
         System.out.println("you have a dept of "+getBalance());
-        
+         
+                System.out.println("your new balance is  " +getBalance()); 
         System.out.println("your new balance is " +getBalance());    
         
     }

@@ -18,10 +18,11 @@ public class BankManag{
      private String AccountType;
      java.util.Date DateCreated;
      private double Balance;
-     
+     private ArrayList<String> Account = new ArrayList();
+   
      public BankManag(){
           Scanner input = new Scanner(System.in);
-          ArrayList<String> Account = new ArrayList();
+          
     int Status = 6;
     
         do{
@@ -34,16 +35,18 @@ public class BankManag{
            
              case 1: System.out.println(" List All Accounts And Their Balances" );
          
-            System.out.println( Account); 
+             Account.add("Account");
+             Account.add("Account1");
+             Account.add("ArrayList"+Account);
            System.out.println("Account Number\t\tAccount Name\t\t Account Type\t\tBranch\t\t\tBalance");
            System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
            System.out.println(+AccountNumber+"\t\t\t"+AccountName+"\t\t    "+AccountType+"\t\t\t"+Branch+"\t\t\tk"+Balance);
-             
+                           
                  System.out.print("enter any key to proceed: ");
              String key = input.next();
              break;
              case 2: System.out.println(" Create A New Account");
-                Account.add("account");
+               
       
             
                  System.out.println( " \n1. student account\n2. executive account\n\t\tEnter your choice");
@@ -92,8 +95,7 @@ public class BankManag{
                     System.out.print("enter your amount: ");
              double Amount = input.nextDouble();
               System.out.println("amount deposited successfully!");      
-                  Balance += Amount ;
-                System.out.println("your new balance is  " +Balance);  
+                  
                 }else{
                       System.out.println("account number did not match ");
                 } 
@@ -153,14 +155,15 @@ public class BankManag{
     
      public BankManag(String AccountName,int AccountNumber, String Branch, double Amount){
          DateCreated = new java.util.Date();
+         
          this.AccountName = AccountName;
          this.AccountNumber = AccountNumber;
          this.Branch = Branch;
          this.AccountType=AccountType;
          this.Balance = 0.00;
-         
+         this.Account = Account;    
      } 
-     Scanner input = new Scanner(System.in);
+    
     
        //set a new account name
     public void setAccountName(String AccountName){
@@ -200,6 +203,11 @@ public class BankManag{
     public double getBalance(){
               return Balance;
     }
+    public void Account() {
+     Account.add("Account");
+   
+     
+     }
   //return date
      public java.util.Date getDateCreated(){
         DateCreated = new java.util.Date();
